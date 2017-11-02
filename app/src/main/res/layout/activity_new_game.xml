@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.game.android.crosses.crossesthecardgame.NewGameActivity">
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_new_game" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cardList"
+        android:layout_width="302dp"
+        android:layout_height="443dp"
+        android:visibility="gone"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="top|center"
+        tools:layout_editor_absoluteX="82dp">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/plusButton"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="listVisibility"
+        android:tint="@color/common_google_signin_btn_text_dark_focused"
+        android:visibility="visible"
+        app:backgroundTint="@android:color/holo_blue_light"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="right|bottom"
+        app:rippleColor="@android:color/holo_blue_dark"
+        app:srcCompat="@drawable/ic_add_box_black_24dp"
+        tools:layout_editor_absoluteY="491dp" />
+
+</android.support.design.widget.CoordinatorLayout>
